@@ -1,8 +1,10 @@
 import React from "react";
 import {Router, Route, Switch} from "react-router-dom";
 import {createBrowserHistory} from "history";
-import RegisterUser from "../components/SingUp/RegisterUser";
+
 import SingUp from "../components/SingUp/SingUpData";
+import EditProfile from "../components/Profile/EditProfile";
+
 // import AddUserRegisterPersonalData from "../components/SingUp/AddUserRegisterPersonalData";
 // import AddUserRegisterDocumentData from "../components/SingUp/AddUserRegisterDocumentData";
 
@@ -14,14 +16,17 @@ const AppRouter = () => (
             <Switch>
                 <Route exact path="/"/>
                 <Route path="/users/create"
-                    component={SingUp}/> {/* <Route
+                    component={SingUp}/> 
+                <Route path="/users/editprofile" component={EditProfile}/>            
+                    {/* <Route
           path="/createuser/step2"
           component={AddUserRegisterPersonalData}
         />
         <Route
           path="/createuser/step3"
           component={AddUserRegisterDocumentData}
-        /> */} </Switch>
+        /> */} 
+        </Switch>
         </div>
     </Router>
 );
